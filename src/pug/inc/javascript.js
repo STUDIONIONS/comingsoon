@@ -13,7 +13,7 @@ yepnope('/assets/templates/comingsoon/js/appjs.js?'+time, undefined, function() 
 	yepnope('/assets/templates/comingsoon/js/main.js?'+time, undefined, function() {
 		$('.page').css({
 			//'backgroundImage' : "url('/assets/templates/comingsoon/images/1.jpg')"
-			'backgroundImage' : "url('/assets/templates/comingsoon/images/projectsoft.jpg')"
+			'backgroundImage' : "url('/assets/templates/comingsoon/images/main-hero.jpg')"
 		});
 	})
 })

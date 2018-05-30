@@ -8,14 +8,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ART-GARAGE/comingsoon.git"
+		"url": "git+https://github.com/STUDIONIONS/comingsoon.git"
 	},
 	"author": "ProjectSoft <projectsoft2009@yandex.ru>",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/ART-GARAGE/comingsoon/issues"
+		"url": "https://github.com/STUDIONIONS/comingsoon/issues"
 	},
-	"homepage": "https://github.com/ART-GARAGE/comingsoon#readme",
+	"homepage": "https://github.com/STUDIONIONS/comingsoon#readme",
 	"devDependencies": {
 		"grunt": "^1.0.1",
 		"grunt-autoprefixer": "^3.0.4",

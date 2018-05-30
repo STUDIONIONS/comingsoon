@@ -9,8 +9,7 @@ module.exports = function(grunt){
 		tasksConfig = {
 			pkg: grunt.file.readJSON("package.json"),
 			meta: {
-				banners: "/*! <%= pkg.name %> v<%= pkg.version %> | <%= pkg.license %> License | <%= pkg.homepage %>\n" +
-						"Редактируя шаблон или запуская сайт, вы берёте на себя ответственность за долги заказчика перед разработчиком!*/"
+				banners: "/**!\n * <%= pkg.name %> v<%= pkg.version %> | <%= pkg.license %> License | <%= pkg.homepage %>\n**/"
 			},
 			uglify: {
 				compile: {
@@ -123,7 +122,8 @@ module.exports = function(grunt){
 					options: optionsPug,
 					files: {
 						"index.html": ['src/pug/index.pug'],
-						"assets/templates/comingsoon/index.html": ['src/pug/index.pug']
+						"assets/templates/comingsoon/index.html": ['src/pug/index.pug'],
+						"assets/templates/comingsoon/login.html": ['src/pug/login.pug']
 					}
 				}
 			},
