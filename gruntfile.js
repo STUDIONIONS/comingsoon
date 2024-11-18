@@ -98,10 +98,7 @@ module.exports = function(grunt){
 				},
 				main: {
 					src: [
-						'src/js/clock.js',
-						'src/js/start.js',
-						'src/js/init.js',
-						'src/js/end.js'
+						'src/js/clock.js'
 					],
 					dest: 'test/js/main.js'
 				}

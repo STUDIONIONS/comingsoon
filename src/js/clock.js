@@ -35,6 +35,12 @@
 		$(this.element).css({
 			backgroundImage: 'url(' + window.clockDesign.background + ')'
 		});
+		this.glass = $(".glass", this.element);
+		this.background = $(".background", this.element);
+		this.hour = $(".hour", this.element);
+		this.minute = $(".minute", this.element);
+		this.second = $(".minute", this.second);
+		/*
 		this.glass = $("<div></div>", {
 			'class': 'glass'
 		}).css({
@@ -60,6 +66,7 @@
 		}).css({
 			borderColor: window.clockDesign.secondcolor
 		});
+		*/
 		$(this.element).append([this.background, this.hour, this.minute, this.second, this.glass]);
 		this.init();
 	};
@@ -117,3 +124,32 @@
 	});
 	
 }(jQuery));
+
+(function(window, document, $){
+	var $body = $('body'),
+		$preloader = $('body .preloader'),
+		w1, w2,
+		resize = function(e){
+			w1 = $body.outerWidth(true);
+			$body.addClass('load');
+			w2 = $body.outerWidth(true);
+			if(w1 != w2) {
+				$body.css('marginRight', (w2 - w1) + 'px');
+			}
+		};
+	resize();
+	$(window).on('resize.comingsoon', resize);
+
+	$(window).on('load', function(){
+		//$body.addClass('load');
+		setTimeout(function(){
+			$preloader.animate({
+				opacity: 0
+			}, 1500, function(){
+				$(window).unbind('resize.comingsoon');
+				$preloader.hide();
+				$body.removeClass('load').removeAttr('style');
+			});
+		}, 4000);
+	});
+}(window, document, $));

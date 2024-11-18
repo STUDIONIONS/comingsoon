@@ -4,7 +4,7 @@
 	"description": "ComingSoon page site ART-GARAGE",
 	"main": "package.json",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "npm i --legacy-peer-deps && bower install"
 	},
 	"repository": {
 		"type": "git",

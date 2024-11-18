@@ -1,0 +1,386 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"v",
+				"var()"
+			],
+			[
+				"cons",
+				"console.log"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"pading",
+				"padding-right"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"b",
+				"black"
+			],
+			[
+				"po",
+				"pointer-events"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"p",
+				"parent"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"t",
+				"tfoot"
+			],
+			[
+				"no",
+				"normal"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"tr",
+				"try\tWrap in try { … } catch (…) { … }"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"json_",
+				"json_encode()"
+			],
+			[
+				"di",
+				"dirname()"
+			],
+			[
+				"iss",
+				"isset()"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/GIT/comingsoon"
+	],
+	"file_history":
+	[
+		"/C/OSPanel/domains/vasilek.spds/site/assets/templates/comingsoon/js/main.js",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/templates/comingsoon/index.html",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/templates/comingsoon/css/main.css",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/templates/projectsoft/tpl/news_tpl.html",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/news_tpl.pug",
+		"/C/OSPanel/domains/vasilek.spds/Gruntfile.js",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/menu.pug",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/snippets/evoSearch1/snippet.class.php",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/childrens.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/less/main.less",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/style.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/script.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/search.pug",
+		"/C/OSPanel/domains/vasilek.spds/.github/workflows/deploy.yml",
+		"/C/OSPanel/domains/vasilek.spds/src/less/prism.less",
+		"/C/OSPanel/domains/vasilek.spds/src/js/main.js",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/inc/head.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/news.pug",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/tvs/multitv/configs/share.config.inc.php",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/snippets/evoSearch/snippet.class.php",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/templates/projectsoft/search.html",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/inc/body_close.pug",
+		"/C/OSPanel/domains/vasilek.spds/test/js/main.js",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/share.less",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/page.less",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/main.less",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/widgets.less",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/screen.less",
+		"/C/OSPanel/domains/vasilek.spds/test/css/main.css",
+		"/C/OSPanel/domains/vasilek.spds/test.json",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/modules/clientsettings/config/tab900.php",
+		"/C/OSPanel/domains/vasilek.spds/src/less/style.less",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/content.less",
+		"/C/OSPanel/domains/vasilek.spds/.gitignore",
+		"/C/OSPanel/domains/vasilek.spds/src/less/fonts/opensans.less",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/inc/share.pug",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/templates/projectsoft/new.html",
+		"/C/OSPanel/domains/vasilek.spds/src/less/variables.less",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/snippets/GetScreenShot/snippet.GetScreenShot.php",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/modules/clientsettings/config/tab055.php",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/new.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/index.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/default.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/search.less",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/srch.less",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/news_outer.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/header.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/less/fonts/iconssite.less",
+		"/C/OSPanel/domains/vasilek.spds/site/.htaccess",
+		"/C/OSPanel/domains/vasilek.spds/bobrovka-vasilek.sublime-project",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/plugins/vasilek/plugin.vasilek.php",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/inc/eya.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/inc/header.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/widget_director.pug",
+		"/C/OSPanel/domains/vasilek.spds/README.md",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/inc/gosuslugi.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/widget_director.less",
+		"/C/OSPanel/domains/vasilek.spds/src/less/plugins/eya.less",
+		"/C/OSPanel/domains/vasilek.spds/src/less/inc/body.less",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/footer.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/news_owner.pug",
+		"/C/OSPanel/domains/vasilek.spds/site/manager/includes/document.parser.class.inc.php",
+		"/C/OSPanel/domains/vasilek.spds/.gitattributes",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/templates/projectsoft/tpl/head.html",
+		"/C/OSPanel/domains/vasilek.spds/site/vendor/projectsoft/bobrovka/src/PluginEvolution.php",
+		"/C/OSPanel/domains/vasilek.spds/src/less/fonts/fontglips.less",
+		"/C/OSPanel/domains/vasilek.spds/site/composer-spds.json",
+		"/C/OSPanel/domains/vasilek.spds/site/composer.json",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/inc/favicon.pug",
+		"/C/OSPanel/domains/vasilek.spds/src/pug/tpl/head.pug",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/templates/projectsoft/js/main.min.js",
+		"/C/OSPanel/domains/vasilek.spds/site/assets/templates/projectsoft/index.html",
+		"/C/GIT/bobrovka-vasilek/site/assets/templates/projectsoft/css/bvi.css",
+		"/C/GIT/bobrovka-vasilek/src/pug/tpl/favicon.pug",
+		"/C/GIT/bobrovka-vasilek/package.json",
+		"/C/GIT/bobrovka-vasilek/src/less/main.less",
+		"/C/GIT/bobrovka-vasilek/src/pug/tpl/head.pug",
+		"/C/GIT/bobrovka-vasilek/src/pug/index.pug",
+		"/C/GIT/bobrovka-vasilek/src/js/main.js",
+		"/C/GIT/bobrovka-vasilek/src/less/bvi/scss/images.less",
+		"/C/GIT/bobrovka-vasilek/.editorconfig",
+		"/C/GIT/bobrovka-vasilek/src/less/bvi/scss/bvi.less",
+		"/C/GIT/bobrovka-vasilek/src/less/bvi/scss/mixins/body.less",
+		"/C/GIT/bobrovka-vasilek/src/less/style.less",
+		"/C/GIT/bobrovka-vasilek/site/assets/templates/projectsoft/css/bvi.min.css",
+		"/C/GIT/bobrovka-vasilek/test/css/bvi.css",
+		"/C/GIT/bobrovka-vasilek/src/less/bvi/scss/body.less",
+		"/C/GIT/bobrovka-vasilek/bower_components/button-visually-impaired-javascript/dist/css/bvi.min.css",
+		"/C/GIT/komsomol-site/src/pug/tpl/footer.pug",
+		"/C/GIT/komsomol-site/src/less/inc/btn.less",
+		"/C/GIT/komsomol-site/src/less/inc/form.less",
+		"/C/GIT/komsomol-site/site/assets/tvs/multitv/configs/share.config.inc.php",
+		"/C/GIT/komsomol-site/src/pug/tpl/yepnope.pug",
+		"/C/GIT/komsomol-site/src/js/jquery.btn.js",
+		"/C/GIT/komsomol-site/src/js/main.js",
+		"/C/GIT/komsomol-site/src/pug/tpl/yepnope-load.pug",
+		"/C/GIT/komsomol-site/src/pug/tpl/director.pug",
+		"/C/GIT/komsomol-site/src/less/inc/footer.less",
+		"/C/GIT/komsomol-site/Gruntfile.js",
+		"/C/GIT/komsomol-site/src/less/inc/error.less",
+		"/C/GIT/komsomol-site/src/pug/childrens.pug",
+		"/C/GIT/komsomol-site/site/assets/templates/projectsoft/tpl/footer.html",
+		"/C/GIT/komsomol-site/site/assets/plugins/removeemptydirs/plugin.removeemptydirs.php",
+		"/C/GIT/komsomol-site/site/comon/json/sendbot.json",
+		"/C/GIT/komsomol-site/README.md",
+		"/C/GIT/komsomol-site/src/less/inc/sidebar.less",
+		"/C/GIT/komsomol-site/src/less/inc/director.less",
+		"/C/GIT/komsomol-site/src/pug/tpl/head.pug",
+		"/C/GIT/komsomol-site/src/less/main.less",
+		"/C/GIT/komsomol-site/src/less/inc/vars.less",
+		"/C/GIT/komsomol-site/gbou.sublime-project",
+		"/C/GIT/komsomol-site/.github/workflows/workwlow.yml",
+		"/C/GIT/komsomol-site/src/less/inc/navmenu.less",
+		"/C/GIT/komsomol-site/src/pug/tpl/global-menu.pug",
+		"/C/GIT/komsomol-site/src/pug/tpl/sidebar.pug",
+		"/C/GIT/komsomol-site/src/pug/tpl/button-menu.pug",
+		"/C/GIT/komsomol-site/site/assets/plugins/tinymce4/theme/theme.tinymce4.site.inc.php",
+		"/C/GIT/komsomol-site/src/pug/tpl/cookie.pug",
+		"/C/GIT/komsomol-site/src/pug/tpl/sendbot_form.pug",
+		"/C/GIT/komsomol-site/src/less/plugins/eye_panel.less",
+		"/C/GIT/komsomol-site/src/less/inc/table.less",
+		"/C/GIT/komsomol-site/.gitignore",
+		"/C/GIT/komsomol-site/.github/workflows/server.yml",
+		"/C/GIT/komsomol-site/src/js/media.js",
+		"/C/GIT/komsomol-site/.editorconfig",
+		"/C/GIT/komsomol-site/src/pug/help.css",
+		"/C/GIT/komsomol-site/site/assets/templates/projectsoft/help.html",
+		"/C/GIT/komsomol-site/src/pug/news_road_safety.pug"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 113.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 326.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Build Site Project",
+	"project": "comingsoon.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 332.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
