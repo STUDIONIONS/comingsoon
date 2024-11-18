@@ -15,4 +15,6 @@
 	--clock-color-minute: [(clock_color_minute)];
 	/* Цвет секундной стрелки */
 	--clock-color-second: [(clock_color_second)];
+	/* Максимальный размер часов */
+	--clock-size: [(clock_size)]px;
 }

@@ -6,7 +6,7 @@ body {
 	margin: 0;
 }
 img {
-  border-style: none;
+	border-style: none;
 }
 h1 {
 	font-size: 2em;
@@ -47,9 +47,13 @@ body {
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-color: #000;
-		color: var(--clock-page-color);
 		background-image: var(--clock-page-bgimage);
+		background-color: var(--clock-page-bgcolor);
+		&,
+		* {
+			color: var(--clock-page-color);
+		}
+		
 	}
 	.nouserselect();
 	&.load {
@@ -163,7 +167,7 @@ body {
 		&-wrapper {
 			margin-right: auto;
 			margin-left: auto;
-			max-width: 320px;
+			max-width: var(--clock-size);
 			position: relative;
 			overflow: hidden;
 			.artclock {
