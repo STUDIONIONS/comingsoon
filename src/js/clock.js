@@ -32,14 +32,14 @@
 		
 		this.element = element;
 		this.interval = null;
-		$(this.element).css({
+		/*$(this.element).css({
 			backgroundImage: 'url(' + window.clockDesign.background + ')'
-		});
+		});*/
 		this.glass = $(".glass", this.element);
 		this.background = $(".background", this.element);
 		this.hour = $(".hour", this.element);
 		this.minute = $(".minute", this.element);
-		this.second = $(".minute", this.second);
+		this.second = $(".second", this.second);
 		/*
 		this.glass = $("<div></div>", {
 			'class': 'glass'

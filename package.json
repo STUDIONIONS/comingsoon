@@ -4,7 +4,8 @@
 	"description": "ComingSoon page site ART-GARAGE",
 	"main": "package.json",
 	"scripts": {
-		"test": "npm i --legacy-peer-deps && bower install"
+		"test": "npm i --legacy-peer-deps && bower install",
+		"build": "grunt -v"
 	},
 	"repository": {
 		"type": "git",
@@ -27,8 +28,6 @@
 		"grunt-contrib-pug": "^1.0.0",
 		"grunt-contrib-requirejs": "^1.0.0",
 		"grunt-contrib-uglify": "^2.0.0",
-		"grunt-contrib-watch": "^1.0.0",
-		"grunt-notify": "git+https://github.com/ProjectSoft-STUDIONIONS/grunt-notify.git",
 		"less-plugin-clean-css": "^1.5.1",
 		"load-grunt-tasks": "^3.5.0",
 		"time-grunt": "^1.4.0"

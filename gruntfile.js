@@ -1,7 +1,7 @@
 module.exports = function(grunt){
 	require('load-grunt-tasks')(grunt);
 	require('time-grunt')(grunt);
-	var pugMinify = true,
+	var pugMinify = false,
 		optionsPug = {
 			pretty: !pugMinify ? '\t' : '',
 			separator:  !pugMinify ? '\n' : ''
@@ -15,7 +15,7 @@ module.exports = function(grunt){
 				compile: {
 					options: {
 						banner: '<%= meta.banners %>',
-						sourceMap: true,
+						sourceMap: false,
 						compress: true
 					},
 					files: [
@@ -23,10 +23,14 @@ module.exports = function(grunt){
 							expand: true,
 							flatten : true,
 							src: [
-								'test/js/main.js'
+								'assets/templates/comingsoon/js/main.js'
 							],
 							dest: 'assets/templates/comingsoon/js/',
-							filter: 'isFile'
+							filter: 'isFile',
+							rename: function (dst, src) {
+								// To keep the source js files and make new files as `*.min.js`:
+								return dst + '/' + src.replace('.js', '.min.js');
+							}
 						},
 						{
 							expand: true,
@@ -35,7 +39,11 @@ module.exports = function(grunt){
 								'test/js/appjs.js'
 							],
 							dest: 'assets/templates/comingsoon/js/',
-							filter: 'isFile'
+							filter: 'isFile',
+							rename: function (dst, src) {
+								// To keep the source js files and make new files as `*.min.js`:
+								return dst + '/' + src.replace('.js', '.min.js');
+							}
 						}
 					]
 				}
@@ -100,7 +108,7 @@ module.exports = function(grunt){
 					src: [
 						'src/js/clock.js'
 					],
-					dest: 'test/js/main.js'
+					dest: 'assets/templates/comingsoon/js/main.js'
 				}
 			},
 			copy: {
@@ -119,8 +127,7 @@ module.exports = function(grunt){
 					options: optionsPug,
 					files: {
 						"index.html": ['src/pug/index.pug'],
-						"assets/templates/comingsoon/index.html": ['src/pug/index.pug'],
-						"assets/templates/comingsoon/login.html": ['src/pug/login.pug']
+						"assets/templates/comingsoon/index.html": ['src/pug/index.pug']
 					}
 				}
 			},
@@ -139,7 +146,16 @@ module.exports = function(grunt){
 							expand: true,
 							flatten : true,
 							src: [
-								'src/images/*.{png,jpg,gif,svg}'
+								'src/images/*.svg'
+							],
+							dest: 'src/pug/images/',
+							filter: 'isFile'
+						},
+						{
+							expand: true,
+							flatten : true,
+							src: [
+								'src/images/*.{png,jpg}'
 							],
 							dest: 'assets/templates/comingsoon/images/',
 							filter: 'isFile'
@@ -156,7 +172,6 @@ module.exports = function(grunt){
 						'src/**/*.*'
 					],
 					tasks: [
-						'notify:watch',
 						'imagemin',
 						'less',
 						'autoprefixer',
@@ -165,31 +180,12 @@ module.exports = function(grunt){
 						'jshint',
 						'uglify',
 						'pug',
-						'notify:done'
 					]
 				}
 			},
-			notify: {
-				watch: {
-					options: {
-						title: "<%= pkg.name %> v<%= pkg.version %>",
-						message: 'Запуск',
-						image: __dirname+'\\src\\notify.png'
-					}
-				},
-				done: {
-					options: {
-						title: "<%= pkg.name %> v<%= pkg.version %>",
-						message: "Успешно Завершено",
-						image: __dirname+'\\src\\notify.png'
-					}
-				}
-			}
 		};
 	
 	grunt.initConfig(tasksConfig);
 	
-	grunt.renameTask('watch',		'delta');
-    grunt.registerTask('dev',		[ 'jshint', 'delta']);
 	grunt.registerTask('default',	tasksConfig.delta.compile.tasks);
 }

@@ -4,5 +4,21 @@
 		{
 			"path": "."
 		}
+	],
+	"settings":  {
+		"font_size": 12,
+		"tab_size": 4
+	},
+	"build_systems": [
+		{
+			"name": "Build Site Project",
+			"working_dir": "${project_path}",
+			"shell_cmd": "npm run build"
+		},
+		{
+			"name": "Site Project Install",
+			"working_dir": "${project_path}",
+			"shell_cmd": "npm run test"
+		}
 	]
 }

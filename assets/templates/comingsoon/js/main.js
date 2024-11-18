@@ -1,5 +1,155 @@
-/**!
- * comingsoon v1.0.0 | ISC License | https://github.com/STUDIONIONS/comingsoon#readme
-**/
-!function(a){function b(){return this.each(function(){var b=a(this),d=b.data("plugin.clock");d||b.data("plugin.clock",d=new c(this))})}var c=function(b){a.extend(c.prototype,{init:function(){var a=this;a.interval=setInterval(a.ticktack.bind(a),50)},ticktack:function(){var a=this,b=new Date,c=b.getHours()%12,d=b.getMinutes(),e=b.getSeconds(),f=b.getMilliseconds(),g=360*c/12+30*d/60,h=360*d/60+6*e/60,i=360*e/60+6*f/1e3;a.hour.css({transform:"rotate("+g+"deg)"}),a.minute.css({transform:"rotate("+h+"deg)"}),a.second.css({transform:"rotate("+i+"deg)"})}}),this.element=b,this.interval=null,a(this.element).css({backgroundImage:"url("+window.clockDesign.background+")"}),this.glass=a("<div></div>",{class:"glass"}).css({backgroundImage:"url("+window.clockDesign.glass+")"}),this.background=a("<div></div>",{class:"background"}).css({backgroundImage:"url("+window.clockDesign.clock+")"}),this.hour=a("<div></div>",{class:"hour"}).css({backgroundImage:"url("+window.clockDesign.hour+")"}),this.minute=a("<div></div>",{class:"minute"}).css({backgroundImage:"url("+window.clockDesign.minute+")"}),this.second=a("<div></div>",{class:"second"}).css({borderColor:window.clockDesign.secondcolor}),a(this.element).append([this.background,this.hour,this.minute,this.second,this.glass]),this.init()},d=a.fn.clock;a.fn.clock=b,a.fn.clock.Constructor=c,a.fn.clock.noConflict=function(){return a.fn.clock=d,this},a(window).on("load",function(){a('[data-plugin="clock"]').each(function(){var c=a(this);b.call(c)})})}(jQuery),function(a,b,c){var d,e,f=c("body"),g=c("body .preloader"),h=function(a){d=f.outerWidth(!0),f.addClass("load"),e=f.outerWidth(!0),d!=e&&f.css("marginRight",e-d+"px")};h(),c(a).on("resize.comingsoon",h),c(a).on("load",function(){setTimeout(function(){g.animate({opacity:0},1500,function(){c(a).unbind("resize.comingsoon"),g.hide(),f.removeClass("load").removeAttr("style")})},4e3)})}(window,document,$);
-//# sourceMappingURL=main.js.map
+
+// Clock Plugin
+(function($){
+	var Clock = function(element){
+		
+		$.extend(Clock.prototype, {
+			init: function(){
+				var self = this;
+				self.interval = setInterval(self.ticktack.bind(self), 50);
+			},
+			ticktack: function(){
+				var self = this,
+					date = new Date(),
+					hour = date.getHours() % 12,
+					minute = date.getMinutes(),
+					second = date.getSeconds(),
+					milisecond = date.getMilliseconds(),
+					rotateHour = ((hour * 360) / 12) + ((minute * 30) / 60),
+					rotateMinute = ((minute * 360) / 60) + ((second * 6) / 60),
+					roteteSecond = ((second * 360) / 60) + ((milisecond * 6) / 1000);
+				self.hour.css({
+					'transform': 'rotate('+rotateHour+'deg)'
+				});
+				self.minute.css({
+					'transform': 'rotate('+rotateMinute+'deg)'
+				});
+				self.second.css({
+					'transform': 'rotate('+roteteSecond+'deg)'
+				});
+			}
+		});
+		
+		this.element = element;
+		this.interval = null;
+		/*$(this.element).css({
+			backgroundImage: 'url(' + window.clockDesign.background + ')'
+		});*/
+		this.glass = $(".glass", this.element);
+		this.background = $(".background", this.element);
+		this.hour = $(".hour", this.element);
+		this.minute = $(".minute", this.element);
+		this.second = $(".second", this.second);
+		/*
+		this.glass = $("<div></div>", {
+			'class': 'glass'
+		}).css({
+			backgroundImage: 'url(' + window.clockDesign.glass + ')'
+		});
+		this.background = $("<div></div>", {
+			'class': 'background'
+		}).css({
+			backgroundImage: 'url(' + window.clockDesign.clock + ')'
+		});
+		this.hour = $("<div></div>", {
+			'class': 'hour',
+		}).css({
+			backgroundImage: 'url(' + window.clockDesign.hour + ')'
+		});
+		this.minute = $("<div></div>", {
+			'class': 'minute',
+		}).css({
+			backgroundImage: 'url(' + window.clockDesign.minute + ')'
+		});
+		this.second = $("<div></div>", {
+			'class': 'second',
+		}).css({
+			borderColor: window.clockDesign.secondcolor
+		});
+		*/
+		$(this.element).append([this.background, this.hour, this.minute, this.second, this.glass]);
+		this.init();
+	};
+	/*Clock.prototype.init = function(){
+		var self = this;
+		self.interval = setInterval(self.ticktack.bind(self), 50);
+	};
+	Clock.prototype.ticktack = function(){
+		var self = this,
+			date = new Date(),
+			hour = date.getHours() % 12,
+			minute = date.getMinutes(),
+			second = date.getSeconds(),
+			milisecond = date.getMilliseconds(),
+			rotateHour = ((hour * 360) / 12) + ((minute * 30) / 60),
+			rotateMinute = ((minute * 360) / 60) + ((second * 6) / 60),
+			roteteSecond = ((second * 360) / 60) + ((milisecond * 6) / 1000);
+			self.hour.css({
+				'transform': 'rotate('+rotateHour+'deg)'
+			});
+			self.minute.css({
+				'transform': 'rotate('+rotateMinute+'deg)'
+			});
+			self.second.css({
+				'transform': 'rotate('+roteteSecond+'deg)'
+			});
+		
+	};*/
+	
+	function Plugin(){
+		return this.each(function(){
+			var $this = $(this),
+			data = $this.data('plugin.clock');
+			if(!data){
+				$this.data('plugin.clock', (data = new Clock(this)));
+			}
+		});
+	}
+	
+	var old = $.fn.clock;
+	
+	$.fn.clock = Plugin;
+	$.fn.clock.Constructor = Clock;
+	
+	$.fn.clock.noConflict = function(){
+		$.fn.clock = old;
+		return this;
+	};
+	
+	$(window).on('load', function () {
+		$('[data-plugin="clock"]').each(function(){
+			var $clock = $(this);
+			Plugin.call($clock);
+		});
+	});
+	
+}(jQuery));
+
+(function(window, document, $){
+	var $body = $('body'),
+		$preloader = $('body .preloader'),
+		w1, w2,
+		resize = function(e){
+			w1 = $body.outerWidth(true);
+			$body.addClass('load');
+			w2 = $body.outerWidth(true);
+			if(w1 != w2) {
+				$body.css('marginRight', (w2 - w1) + 'px');
+			}
+		};
+	resize();
+	$(window).on('resize.comingsoon', resize);
+
+	$(window).on('load', function(){
+		//$body.addClass('load');
+		setTimeout(function(){
+			$preloader.animate({
+				opacity: 0
+			}, 1500, function(){
+				$(window).unbind('resize.comingsoon');
+				$preloader.hide();
+				$body.removeClass('load').removeAttr('style');
+			});
+		}, 4000);
+	});
+}(window, document, $));

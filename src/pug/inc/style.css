@@ -1,0 +1,18 @@
+:root {
+	/* Изображение фона */
+	--clock-page-bgimage: url([(clock_page_bgimage)]);
+	/* Цвет общего фона */
+	--clock-page-bgcolor: [(clock_page_bgcolor)];
+	/* Цвет текста */
+	--clock-page-color: [(clock_page_color)];
+	/* Цвет фона циферблата */
+	--clock-color-clock: [(clock_color_clock)];
+	/* Цвет циферблата */
+	--clock-color-ciferblat: [(clock_color_ciferblat)];
+	/* Цвет часовой стрелки */
+	--clock-color-hour: [(clock_color_hour)];
+	/* Цвет минутной стрелки */
+	--clock-color-minute: [(clock_color_minute)];
+	/* Цвет секундной стрелки */
+	--clock-color-second: [(clock_color_second)];
+}

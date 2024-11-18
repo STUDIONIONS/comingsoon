@@ -20,11 +20,11 @@ a {
 	background-color: transparent;
 	&, &:focus {
 		text-decoration: underline;
-		color: #999;
+		color: var(--clock-page-color);
 	}
 	&:hover {
 		text-decoration: underline;
-		color: #fff;
+		color: var(--clock-page-color);
 	}
 }
 *:after,
@@ -48,7 +48,8 @@ body {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-color: #000;
-		color: #fff;
+		color: var(--clock-page-color);
+		background-image: var(--clock-page-bgimage);
 	}
 	.nouserselect();
 	&.load {
@@ -83,8 +84,6 @@ body {
 	}
 	&.studionions {
 		.page {
-			background-color: #fff;
-			color: #000;
 			&:before {
 				position: fixed;
 				z-index: 0;
@@ -96,7 +95,7 @@ body {
 				bottom: 0px;
 				width: 100%;
 				height: 100%;
-				background-color: rgba(0, 219, 216, .8);
+				background-color: var(--clock-page-bgcolor);
 			}
 		}
 		.container {
@@ -108,23 +107,23 @@ body {
 			.content {
 				a {
 					&, &:focus {
-						color: #000;
+						color: var(--clock-page-color);
 					}
 					&:hover {
-						color: #fff;
+						color: var(--clock-page-color);
 					}
 				}
 			}
 		}
 		.clock {
-			background-color: rgba(17, 116, 115, 0.75)
+			background-color: var(--clock-color-clock);
 		}
 		a {
 			&, &:focus {
-				color: #000;
+				color: var(--clock-page-color);
 			}
 			&:hover {
-				color: #fff;
+				color: var(--clock-page-color);
 			}
 		}
 	}
@@ -184,7 +183,7 @@ body {
 			&,
 			&:hover,
 			&:focus {
-				color: #fff;
+				color: var(--clock-page-color);
 			}
 		}
 	}
