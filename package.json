@@ -4,7 +4,7 @@
 	"description": "ComingSoon page site ART-GARAGE",
 	"main": "package.json",
 	"scripts": {
-		"test": "npm i --legacy-peer-deps && bower install",
+		"test": "npm i --legacy-peer-deps --no-package-lock && bower install",
 		"build": "grunt -v"
 	},
 	"repository": {
