@@ -1,4 +1,5 @@
 /.htaccess
+/*.sublime-workspace
 /node_modules/
 /bower_components/
 /docs/assets/files/

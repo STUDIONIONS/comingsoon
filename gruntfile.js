@@ -2,17 +2,24 @@ module.exports = function(grunt){
 	require('load-grunt-tasks')(grunt);
 	require('time-grunt')(grunt);
 	var pugMinify = false,
+		hash = (new Date()).getTime(),
 		optionsPug = {
 			pretty: !pugMinify ? '\t' : '',
-			separator:  !pugMinify ? '\n' : ''
+			separator:  !pugMinify ? '\n' : '',
+			data: function(dest, src) {
+				return {
+					"base": "[(site_url)]",
+					"hash": hash,
+				}
+			}
 		},
 		tasksConfig = {
 			pkg: grunt.file.readJSON("package.json"),
 			meta: {
-				banners: "/**!\n * <%= pkg.name %> v<%= pkg.version %> | <%= pkg.license %> License | <%= pkg.homepage %>\n**/"
+				banners: ""
 			},
 			uglify: {
-				compile: {
+				main: {
 					options: {
 						banner: '<%= meta.banners %>',
 						sourceMap: false,
@@ -23,25 +30,31 @@ module.exports = function(grunt){
 							expand: true,
 							flatten : true,
 							src: [
-								'assets/templates/comingsoon/js/main.js'
+								'site/assets/templates/comingsoon/js/main.js'
 							],
-							dest: 'assets/templates/comingsoon/js/',
+							dest: 'site/assets/templates/comingsoon/js/',
 							filter: 'isFile',
 							rename: function (dst, src) {
-								// To keep the source js files and make new files as `*.min.js`:
 								return dst + '/' + src.replace('.js', '.min.js');
 							}
-						},
+						}
+					]
+				},
+				app: {
+					options: {
+						sourceMap: false,
+						compress: true
+					},
+					files: [
 						{
 							expand: true,
 							flatten : true,
 							src: [
-								'test/js/appjs.js'
+								'site/assets/templates/comingsoon/js/appjs.js'
 							],
-							dest: 'assets/templates/comingsoon/js/',
+							dest: 'site/assets/templates/comingsoon/js/',
 							filter: 'isFile',
 							rename: function (dst, src) {
-								// To keep the source js files and make new files as `*.min.js`:
 								return dst + '/' + src.replace('.js', '.min.js');
 							}
 						}
@@ -64,15 +77,9 @@ module.exports = function(grunt){
 						compress: false,
 						ieCompat: false,
 						banner: '<%= meta.banners %>',
-						plugins: [
-							new (require('less-plugin-clean-css'))({
-								level: {
-									1: {
-										specialComments: 0
-									}
-								}
-							})
-						],
+						modifyVars: {
+							'hash': hash
+						}
 					}
 				}
 			},
@@ -83,7 +90,7 @@ module.exports = function(grunt){
 				},
 				css: {
 					files: {
-						'tests/css/main.css' : ['test/css/main.css']
+						'test/css/main.css' : ['test/css/main.css']
 					}
 				},
 			},
@@ -93,22 +100,35 @@ module.exports = function(grunt){
 				},
 				dist: {
 					src: [
-						'tests/css/main.css'
+						'test/css/main.css'
 					],
-					dest: 'assets/templates/comingsoon/css/main.css',
+					dest: 'site/assets/templates/comingsoon/css/main.css',
 				},
 				appjs: {
 					src: [
 						'bower_components/jquery/dist/jquery.js',
 						'bower_components/jquery.transform.js/jquery.transform2d.js'
 					],
-					dest: 'test/js/appjs.js'
+					dest: 'site/assets/templates/comingsoon/js/appjs.js'
 				},
 				main: {
 					src: [
 						'src/js/clock.js'
 					],
-					dest: 'assets/templates/comingsoon/js/main.js'
+					dest: 'site/assets/templates/comingsoon/js/main.js'
+				}
+			},
+			cssmin: {
+				target: {
+					files: [
+						{
+							expand: true,
+							cwd: 'site/assets/templates/comingsoon/css',
+							src: ['*.css', '!*.min.css'],
+							dest: 'site/assets/templates/comingsoon/css',
+							ext: '.min.css'
+						}
+					]
 				}
 			},
 			copy: {
@@ -118,7 +138,7 @@ module.exports = function(grunt){
 					src: [
 						'**.*'
 					],
-					dest: 'assets/templates/comingsoon/fonts/',
+					dest: 'site/assets/templates/comingsoon/fonts/',
 				}
 				
 			},
@@ -127,7 +147,7 @@ module.exports = function(grunt){
 					options: optionsPug,
 					files: {
 						"index.html": ['src/pug/index.pug'],
-						"assets/templates/comingsoon/index.html": ['src/pug/index.pug']
+						"site/assets/templates/comingsoon/index.html": ['src/pug/index.pug']
 					}
 				}
 			},
@@ -157,16 +177,13 @@ module.exports = function(grunt){
 							src: [
 								'src/images/*.{png,jpg}'
 							],
-							dest: 'assets/templates/comingsoon/images/',
+							dest: 'site/assets/templates/comingsoon/images/',
 							filter: 'isFile'
 						}
 					]
 				}
 			},
 			delta: {
-				options: {
-					livereload: true,
-				},
 				compile: {
 					files: [
 						'src/**/*.*'
@@ -176,6 +193,7 @@ module.exports = function(grunt){
 						'less',
 						'autoprefixer',
 						'concat',
+						'cssmin',
 						'copy',
 						'jshint',
 						'uglify',

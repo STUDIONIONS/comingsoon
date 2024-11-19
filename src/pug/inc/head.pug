@@ -4,27 +4,26 @@ head
 	meta(http-equiv="X-UA-Compatible" content="IE=edge")
 	meta(name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
 	meta(name="cmsmagazine" content="d8e7426ec72ad3e4ea38b09ebf01284c")
-	title Сайт находится на обслуживании
+	title Сайт находится на обслуживании | [(site_name)]
 	base(href="/")
 	link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
-	meta(itemprop="title" name="title" content="#{title} | Сайт на реконструкции")
-	meta(itemprop="description" name="description" content="#{title} | Сайт на реконструкции")
-	meta(itemprop="keywords" name="keywords" content="")
+	meta(itemprop="title" name="title" content="Сайт находится на обслуживании | [(site_name)]")
+	meta(itemprop="description" name="description" content="Сайт находится на обслуживании")
+	meta(itemprop="keywords" name="keywords" content="Сайт находится на обслуживании, [(site_name)]")
 	meta(itemprop="image" name="image" content="/assets/templates/comingsoon/images/artgarage.png")
 	meta(name="robots" content="index, follow")
-	meta(property="og:title" content="#{title} | Сайт на реконструкции")
-	meta(property="og:description" content="#{title} | Сайт на реконструкции")
+	meta(property="og:title" content="Сайт находится на обслуживании | [(site_name)]")
+	meta(property="og:description" content="Сайт находится на обслуживании")
 	meta(property="og:url" content="/")
 	meta(property="og:locale" content="ru_RU")
 	meta(property="og:type" content="website")
-	meta(property="og:site_name" content="#{title}")
+	meta(property="og:site_name" content="[(site_name)]")
 	meta(property="og:image" content="/assets/templates/comingsoon/images/artgarage.png")
 	meta(property="og:image:width" content="1024")
 	meta(property="og:image:height" content="768")
 	meta(property="og:image:type" content="image/png")
+	//- https://fonts.googleapis.com/css?family=Noto+Sans:400,700&subset=cyrillic
 	style
 		="\n"
 		include style.css
-	style
-		="\n"
-		include ../../../assets/templates/comingsoon/css/main.css
+	link(rel="stylesheet" type="text/css" href="assets/templates/comingsoon/css/main.min.css?time=" + hash)
