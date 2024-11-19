@@ -1,6 +1,6 @@
 			:root {
 				/* Изображение фона */
-				--clock-page-bgimage: url([(clock_page_bgimage)]);
+				--clock-page-bgimage: url(/[(clock_page_bgimage)]);
 				/* Цвет общего фона */
 				--clock-page-bgcolor: [(clock_page_bgcolor)];
 				/* Цвет текста */
